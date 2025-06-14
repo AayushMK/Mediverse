@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mediverse Tradelink Pvt Ltd | Healthcare Solutions Nepal</title>
+    <style>
+        /* Global Styles */
+        :root {
+            --primary: #0056b3;
+            --secondary: #003366;
+            --accent: #00a651;
+            --light: #f5f9ff;
+            --dark: #333333;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: var(--dark);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            padding: 60px 0;
+        }
+        
+        h1, h2, h3, h4 {
+            color: var(--secondary);
+            margin-bottom: 20px;
+        }
+        
+        p {
+            margin-bottom: 15px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            background: #003d82;
+            transform: translateY(-2px);
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        /* Header Styles */
+        header {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+        
+        .logo img {
+            height: 50px;
+            margin-right: 10px;
+        }
+        
+        .logo-text {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--secondary);
+        }
+        
+        .logo-text span {
+            color: var(--primary);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,86,179,0.8), rgba(0,51,102,0.8)), url('https://i.ibb.co/nMs0kVg8/background.png" alt="background" border=');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 120px 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 20px;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+        
+        /* About Section */
+        .about {
+            background: var(--light);
+        }
+        
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+        
+        .flex-item {
+            width: 48%;
+            margin-bottom: 30px;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        /* Mission/Vision Section */
+        .mission-vision {
+            background: var(--secondary);
+            color: white;
+        }
+        
+        .mission-vision h2 {
+            color: white;
+        }
+        
+        .mv-boxes {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+        
+        .mv-box {
+            width: 48%;
+            padding: 30px;
+            background: #3c9db0;
+            border-radius: 8px;
+        }
+        
+        /* Stats Section */
+        .stats {
+            background: #239e99;
+            color: white;
+            text-align: center;
+        }
+        
+        .stats-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        
+        .stat-item {
+            margin: 20px;
+        }
+        
+        .stat-item h2 {
+            font-size: 48px;
+            color: white;
+            margin-bottom: 5px;
+        }
+        
+        /* Founders Section */
+        .founders {
+            background: var(--light);
+        }
+        
+        .founder-profiles {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+        
+        .founder-card {
+            width: 48%;
+            display: flex;
+            margin-bottom: 30px;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .founder-img {
+            width: 150px;
+            height: 150px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 8px 0 0 8px;
+        }
+        
+        .founder-info {
+            padding: 20px;
+            flex: 1;
+        }
+        
+        .founder-info h3 {
+            margin-bottom: 5px;
+        }
+        
+        .founder-info em {
+            color: #666;
+            display: block;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        
+        /* Products Section */
+        .products {
+            background: white;
+        }
+        
+        .product-tabs {
+            display: flex;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .tab-btn {
+            padding: 10px 20px;
+            background: none;
+            border: none;
+            border-bottom: 3px solid transparent;
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--dark);
+        }
+        
+        .tab-btn.active {
+            border-bottom: 3px solid var(--primary);
+            color: var(--primary);
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        /* CSR Section */
+        .csr {
+            background: var(--light);
+        }
+        
+        .csr-pillars {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+        
+        .pillar {
+            width: 30%;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--secondary);
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column {
+            width: 23%;
+            margin-bottom: 30px;
+        }
+        
+        .footer-column h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-column a:hover {
+            color: white;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .flex-item, .mv-box, .founder-card, .pillar, .footer-column {
+                width: 100%;
+            }
+            
+            .founder-card {
+                flex-direction: column;
+            }
+            
+            .founder-img {
+                width: 100%;
+                height: 200px;
+                border-radius: 8px 8px 0 0;
+            }
+            
+            nav {
+                flex-direction: column;
+            }
+            
+            .nav-links {
+                margin-top: 20px;
+            }
+            
+            .nav-links li {
+                margin: 0 10px;
+            }
+            
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .hero p {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="container">
+        <nav>
+            <a href="#" class="logo" style="display: flex; align-items: center; text-decoration: none;">
+                <img src="https://i.ibb.co/27jQZqPD/mv.png" class="logo-img" alt="Mediverse Tradelink Logo" style="width: 120px; height: auto; margin-right: 12px;">
+                <div class="logo-text" style="
+                    font-size: 2rem;
+                    font-weight: bold;
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    color: #45d1ca /* color matching the logo blue */
+                ">
+                    Mediverse <span style="color: #069688;">Tradelink</span>
+                </div>>
+          
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#leadership">Leadership</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#csr">CSR</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Empowering Healthcare, Expanding Possibilities, Pioneering Healthcare Distribution in Nepal</h1>
+            <p>Delivering quality surgical solutions today, expanding to nutraceuticals and pharmaceuticals for a healthier Nepal tomorrow</p>
+            <a href="#contact" class="btn">Partner With Us</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="text-center">About MVTL</h2>
+            <p class="text-center">Welcome to Mediverse Tradelink Pvt Ltd (MVTL) – a dynamic force in Nepal's healthcare sector, specializing in the import and distribution of high-quality and innovative surgical products. With a vision to expand into nutritional supplements and pharmaceuticals, we are committed to evolving alongside Nepal's growing medical needs.</p>
+            
+            <div class="flex-container">
+                <div class="flex-item">
+                    <h3>Our Journey</h3>
+                    <p>Founded in 2025 by four enthusiast, MVTL plan to grow from a small distributor to one of the Nepal's most trusted medical supply partners, serving over 250 healthcare institutions nationwide.</p>
+                </div>
+                <div class="flex-item">
+                    <h3>Market Position</h3>
+                    <p>We are committed to securing 25% market share in Nepal's surgical product sector, backed by a robust distribution network spanning 50+ districts. By ensuring reliable access to high-quality medical supplies, we empower healthcare providers to deliver exceptional patient care nationwide. Recognizing the shift toward preventive healthcare, MVTL will launch a dedicated nutraceutical division in 2026. Our mission? To offer scientifically backed wellness solutions that help Nepali communities thrive—before illness strikes. Beyond surgical and nutraceutical excellence, MVTL is laying the groundwork to enter the pharmaceutical sector. We're not just observing Nepal's unmet medical needs—we're engineering solutions to turn them into reality.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission/Vision Section -->
+    <section class="mission-vision">
+        <div class="container">
+            <h2 class="text-center">Our Core Philosophy</h2>
+            
+            <div class="mv-boxes">
+                <div class="mv-box">
+                    <h3>Our Vision</h3>
+                    <p>" We aim to become Nepal's most trusted healthcare supply chain partner by bridging global innovations with local needs, delivering high-quality surgical and medical supplies through ethical distribution, while expanding into nutraceuticals and pharmaceuticals to provide holistic healthcare solutions and strengthen Nepal's medical infrastructure for a healthier future."</p>
+                </div>
+                <div class="mv-box">
+                    <h3>Our Mission</h3>
+                    <p>" Our mission is to enhance healthcare outcomes in Nepal by delivering quality-certified surgical, medical, and future nutraceutical products through resilient supply networks, ensuring reliable nationwide access to advanced therapeutic solutions while maintaining the highest standards of excellence and affordability."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-container">
+                <div class="stat-item">
+                    <h2>250+</h2>
+                    <p>Healthcare Partners</p>
+                </div>
+                <div class="stat-item">
+                    <h2>55+</h2>
+                    <p>Districts Covered</p>
+                </div>
+                <div class="stat-item">
+                    <h2>100%</h2>
+                    <p>Delivery Accuracy Aim</p>
+                </div>
+                  <div class="stat-item">
+                    <h2>2026</h2>
+                    <p>Nutraceutical Launch</p>
+                </div>
+                <div class="stat-item">
+                    <h2>Future Plan</h2>
+                    <p>Pharmaceutical Launch</p>
+                </div>
+            </div>
+        </div>
+    </section>
+       </div>
+       
+
+    <!-- Founders Section -->
+
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Leadership Team</title>
+  <style>
+    body {
+      background-color: #f5f9ff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 40px 20px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #1d3557;
+      margin-bottom: 40px;
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    .team-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: #f0e5df;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      padding: 20px 24px;
+    }
+
+    .card img {
+      float: left;
+      width: 64px;
+      height: 64px;
+      object-fit: cover;
+      margin-right: 16px;
+      border-radius: 4px;
+    }
+
+    .card h3 {
+      margin: 0;
+      font-size: 18px;
+      font-weight: italic;
+      color: #2a5c5a;
+    }
+
+    .card h4 {
+      margin: 4px 0 12px;
+      font-size: 14px;
+      font-style: italic;
+      font-weight: normal;
+      color: #444;
+    }
+
+    .card p {
+      font-size: 15px;
+      color: black;
+      line-height: 1.4;
+      margin-bottom: 8px;
+    }
+  </style>
+</head>
+<body>
+    
+  <h2 id ="leadership">Our Leadership Team</h2>
+  <div class="team-container">
+    
+     <div class="card">
+      <a href="https://ibb.co/BHbh2z49"><img src="https://i.ibb.co/TD6QMvKs/naresh1.jpg" alt="naresh1" border="0"></a>
+      <h3>Naresh Budhathoki</h3>
+      <h4>Director : Sales/Operations/Market Research</h4>
+      <p>" Our logistics network ensures critical supplies reach even remote areas within 72 hours - because healthcare can’t wait. MVTL don’t just sell products—we deliver solutions that heal. From Surgical feat to the frontiers of Nutra and Pharma based products in upcoming days, our success is driven by relentless market insight, seamless operations, and a sales force that understands Nepal’s pulse. Together, we turn challenges into healthcare innovation starts with understanding the need behind every number”</p>
+      <p>Precision in planning. Excellence in execution.</p>
+    </div>
+
+   
+    <div class="card">
+     <a href="https://ibb.co/Xf430wBN"><img src="https://i.ibb.co/JWdy6hL0/saro-11.jpg" alt="saro-11" border="0"></a>
+      <h3>Saroj Shah Thakuri</h3>
+      <h4>Director : HR/Strategy/Legal</h4>
+      <p>" We believe that people drive progress, strategy shapes success, and integrity ensures impact. With MVTL, as we expand from Surgical excellence into imminent Medical Nutrition and Medicine centric endeavours, our commitment remains firm: to cultivate talent, navigate challenges with foresight, and uphold the highest legal and ethical standards—because sustainable growth begins with trust."</p>
+      <p>Sharp mind with Specializes in healthcare logistics.</p>
+    </div>
+
+    <div class="card">
+      <a href="https://ibb.co/Myr6zKrR"><img src="https://i.ibb.co/352zxV20/pranav1.jpg" alt="pranav1" border="0"></a>
+      <h3>Pranav Acharya</h3>
+      <h4>Director : Finance/Supply Chain/PR</h4>
+      <p>" Sustainable growth isn’t an option - it’s our responsibility to Nepal’s healthcare ecosystem. We don’t just manage numbers and logistics—we fuel Nepal’s healthcare evolution. From precision in surgical supply chains to the promise of Medicine sectors and Pharma Food catagories in near timeline, our strength lies in financial agility, seamless operations, and trusted relationships. MVTL believes every rupee saved, every product delivered, and every partnership nurtured brings us closer to a healthier nation.”</p>
+      <p>Straightening Financial Structure, bridging gaps, and building trust</p>
+    </div>
+<div class="card">
+      <a href="https://ibb.co/vC2XNRXs"><img src="https://i.ibb.co/HLmhc3hN/Pramod.jpg" alt="Pramod" border="0"></a>
+      <h3>Pramod Maharjan</h3>
+      <h4>Director: Marketing/Business & Product Development</h4>
+      <p>" At MVTL, we don't just distribute surgical products—we heal possibilities. As we expand into Nutraceuticals and Pharmaceuticals in forthcoming days ahead from present Surgical preeminence, our mission remains clear: to bridge global innovations with Nepal's healthcare needs, ensuring quality, accessibility, and trust. Together, we're not just building a business; we're shaping the future of wellness."</p>
+      <p>Dependable Surgical/medical products facilitation.</p>
+    </div>
+   
+  </div>
+</body>
+</html>
+
+
+
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2 class="text-center">Our Product Ecosystem</h2>
+            
+            <div class="product-tabs">
+                <button class="tab-btn active" onclick="openTab(event, 'surgical')">Surgical Solutions</button>
+                <button class="tab-btn" onclick="openTab(event, 'nutraceuticals')">Nutraceuticals (2026)</button>
+                <button class="tab-btn" onclick="openTab(event, 'pharma')">Pharmaceuticals (Future)</button>
+            </div>
+            
+            <div id="surgical" class="tab-content active">
+                <h3>Current Surgical Product Portfolio</h3>
+                <ul>
+                    <li><strong>Hernioplasty:</strong> Quality Surgical Mesh, Tracker</li>
+                    <li><strong>Wound Management:</strong> Skin Stapler, Skin Glue</li>
+                    <li><strong>Critical Care:</strong> CVC, ET Tube, Tracheostomy Tube</li>
+                    <li><strong>Others:</strong> Biopsy Gun, PICC, Chemo Port, DJ Staint,  catheter stabilization devices, etc</li>
+                </ul>
+                <p>All products meet international quality standards with CE, BIS certification.</p>
+            </div>
+            
+            <div id="nutraceuticals" class="tab-content">
+                <h3>Coming in 2026: Nutraceutical Division</h3>
+                <p>Our evidence-based formulations will address Nepal-specific nutritional gaps:</p>
+                <ul>
+                    <li><strong>Immunity Boosters:</strong> Core Critical Care focused Quality Nutrition Supply</li>
+                    <li><strong>Metabolic Health:</strong> Diabetes Care Formula for blood sugar management</li>
+                    <li><strong>Women's Wellness:</strong> Prenatal Nutrition Pack for maternal health</li>
+                    <li><strong>Senior Care:</strong> Joint Mobility Blend for arthritis support</li>
+                </ul>
+                <a href="#" class="btn">Express Early Interest</a>
+            </div>
+            
+            <div id="pharma" class="tab-content">
+                <h3>Future Pharmaceutical Expansion</h3>
+                <p>Planned therapeutic categories include:</p>
+                <ul>
+                    <li>Essential Medicines (WHO priority list)</li>
+                    <li>Chronic Care (Diabetes, Hypertension)</li>
+                  <li>Criticla Care (ICU, CCU, HDU)</li>
+                    <li>Specialty Drugs requiring cold-chain distribution</li>
+                </ul>
+                <p>We're currently establishing partnerships with global manufacturers.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CSR Section -->
+    <section id="csr" class="csr">
+        <div class="container">
+            <h2 class="text-center">Corporate Social Responsibility</h2>
+            <p class="text-center">Healing Beyond Business</p>
+            
+            <div class="csr-pillars">
+                <div class="pillar">
+                    <h3>Rural Healthcare Access</h3>
+                    <ul>
+                    
+                        <li>Emergency supply support during disasters</li>
+                      <li>Free Sample Distribution</li>
+                    </ul>
+                </div>
+                
+                <div class="pillar">
+                    <h3>Healthcare Education</h3>
+                    <ul>
+                           <li>Hospital staff training programs</li>
+                        <li>Community health awareness campaigns</li>
+                    </ul>
+                </div>
+                
+                <div class="pillar">
+                    <h3>Sustainable Operations</h3>
+                    <ul>
+                        <li>Carbon-neutral logistics by 2026</li>
+                        <li>Eco-friendly packaging initiatives</li>
+                        <li>Ethical sourcing policies</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="text-center">Contact Us</h2>
+            
+            <div class="flex-container">
+                <div class="flex-item">
+                    <h3>Head Office</h3>
+                    <p>Jalbinayak-06, Chovar<br>
+                    Kirtipur, Nepal</p>
+                    
+                    <h3>Contact Information</h3>
+                    <p><strong>Phone:</strong> +977-9851163848<br>
+                    <strong>Email:</strong> mvtl@mediversetradelink.com<br>
+                    <strong>Business Hours:</strong> Sunday-Friday: 9:00 AM - 5:00 PM</p>
+                    
+                    <h3>Follow Us</h3>
+                    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Social Media Icons</title>
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    .social-icons a {
+      margin: 0 10px;
+      font-size: 30px;
+      text-decoration: none;
+      transition: transform 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.2);
+    }
+
+    .social-icons .facebook {
+      color: #1877F2;
+    }
+
+    .social-icons .instagram {
+      /* Instagram gradient workaround with solid color */
+      color: #E4405F;
+    }
+
+    .social-icons .whatsapp {
+      color: #25D366;
+    }
+  </style>
+</head>
+<body>
+
+  <p class="social-icons">
+    <a href="https://www.facebook.com" target="_blank" aria-label="Facebook" class="facebook">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="https://www.instagram.com" target="_blank" aria-label="Instagram" class="instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://wa.me/1234567890" target="_blank" aria-label="WhatsApp" class="whatsapp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </p>
+
+</body>
+</html>
+
+                </div>
+                
+                <div class="flex-item">
+                    <h3>Send Us a Message</h3>
+                    <form id="contactForm">
+                        <div style="margin-bottom: 15px;">
+                            <input type="text" placeholder="Your Name" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;">
+                        </div>
+                        <div style="margin-bottom: 15px;">
+                            <input type="email" placeholder="Email Address" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;">
+                        </div>
+                        <div style="margin-bottom: 15px;">
+                            <input type="text" placeholder="Subject" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;">
+                        </div>
+                        <div style="margin-bottom: 15px;">
+                            <textarea placeholder="Your Message" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; height: 120px;"></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="#">Surgical Supplies</a></li>
+                        <li><a href="#">Upcoming Nutraceuticals</a></li>
+                        <li><a href="#">Future Pharmaceuticals</a></li>
+                        <li><a href="#">Product Catalog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#leadership">Leadership</a></li>
+                        <li><a href="#csr">CSR</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Product Guides</a></li>
+                        <li><a href="#">Regulatory Info</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#">Partner Portal</a></li>
+                        <li><a href="#">Distributor Login</a></li>
+                        <li><a href="#">Newsletter</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2025 Mediverse Tradelink Pvt Ltd. All Rights Reserved.</p>
+                <p>Registered Office: Jalbinayak-06, Chovar, Kirtipur, Nepal</p>
+                <p style="margin-top: 15px;">
+                    <a href="#" style="color: white; margin: 0 10px;">Privacy Policy</a> | 
+                    <a href="#" style="color: white; margin: 0 10px;">Terms of Service</a> | 
+                    <a href="#" style="color: white; margin: 0 10px;">Whistleblower Policy</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Tab functionality
+        function openTab(evt, tabName) {
+            var i, tabcontent, tabbuttons;
+            
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("active");
+            }
+            
+            tabbuttons = document.getElementsByClassName("tab-btn");
+            for (i = 0; i < tabbuttons.length; i++) {
+                tabbuttons[i].classList.remove("active");
+            }
+            
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will contact you soon.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
