@@ -1,0 +1,141 @@
+/* Custom CSS for vanilla JS application */
+
+/* Tab content visibility */
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Background grid pattern */
+.bg-grid-slate-100 {
+    background-image: radial-gradient(circle, #e2e8f0 1px, transparent 1px);
+    background-size: 24px 24px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* Smooth transitions */
+* {
+    scroll-behavior: smooth;
+}
+
+/* Focus states for accessibility */
+button:focus,
+a:focus {
+    outline: 2px solid #10b981;
+    outline-offset: 2px;
+}
+
+/* Loading state for images */
+img {
+    transition: opacity 0.3s ease;
+}
+
+img[loading="lazy"] {
+    opacity: 0;
+}
+
+img[loading="lazy"].loaded {
+    opacity: 1;
+}
+
+/* Mobile menu animation */
+#mobile-menu {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Card hover effects */
+.group:hover .group-hover\:scale-105 {
+    transform: scale(1.05);
+}
+
+.group:hover .group-hover\:translate-x-1 {
+    transform: translateX(0.25rem);
+}
+
+/* Tab button styling */
+.tab-button {
+    background-color: #f3f4f6;
+    color: #374151;
+}
+
+.tab-button:hover {
+    background-color: #e5e7eb;
+}
+
+.tab-button.active {
+    background-color: #059669;
+    color: white;
+    box-shadow: 0 10px 15px -3px rgba(5, 150, 105, 0.25);
+}
+
+/* Responsive text scaling */
+@media (max-width: 640px) {
+    .text-4xl {
+        font-size: 2rem;
+    }
+    
+    .text-5xl {
+        font-size: 2.5rem;
+    }
+    
+    .text-6xl {
+        font-size: 3rem;
+    }
+}
+
+/* Ensure proper spacing for pharmaceutical cards */
+#content-pharma .grid {
+    gap: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+    #content-pharma .grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+/* Make sure all pharmaceutical cards have equal height */
+#content-pharma .grid > div {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#content-pharma .grid > div > div:last-child {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
