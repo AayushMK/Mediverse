@@ -612,6 +612,24 @@ function createContact() {
                             </div>
                         `).join('')}
 
+                        <!-- Email Contact -->
+                        <div class="border rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
+                            <div class="flex items-start space-x-4">
+                                <div class="p-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 text-purple-600">
+                                        <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path>
+                                        <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                                    </svg>
+                                </div>
+                                <div class="flex-1">
+                                    <h4 class="font-semibold text-gray-900 mb-2">Email</h4>
+                                    <a href="mailto:${COMPANY_DATA.contact.email}" class="text-emerald-600 hover:text-emerald-700 font-medium text-sm">
+                                        ${COMPANY_DATA.contact.email}
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
                         <!-- WhatsApp Contact -->
                         <div class="border rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
                             <div class="flex items-start space-x-4">
@@ -641,6 +659,7 @@ function createContact() {
                         </div>
                     </div>
 
+                
                     <!-- Call to Action -->
                     <div class="space-y-8">
                         <div class="border rounded-xl shadow-lg bg-gradient-to-br from-emerald-50 to-teal-50 p-8 text-center">
@@ -654,12 +673,17 @@ function createContact() {
                             </div>
                             
                             <div class="space-y-4">
-                                <a href="tel:${COMPANY_DATA.contact.phone}" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-lg font-medium transition-colors inline-flex items-center justify-center">
+                                <a href="tel:${COMPANY_DATA.contact.phone}" class="w-full bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 shadow-md hover:shadow-lg inline-flex items-center justify-center">
                                     ${createIcon('phone', 'mr-2 h-5 w-5')}
                                     Call Now
                                 </a>
                                 
-                                <a href="${COMPANY_DATA.social.whatsapp}" target="_blank" class="w-full bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition-colors inline-flex items-center justify-center">
+                                <a href="mailto:${COMPANY_DATA.contact.email}" class="w-full bg-gradient-to-r from-violet-500 to-purple-600 hover:from-violet-600 hover:to-purple-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 shadow-md hover:shadow-lg inline-flex items-center justify-center">
+                                    ${createIcon('mail', 'mr-2 h-5 w-5')}
+                                    Send Email
+                                </a>
+
+                                <a href="${COMPANY_DATA.social.whatsapp}" target="_blank" class="w-full bg-gradient-to-r from-green-500 to-lime-500 hover:from-green-600 hover:to-lime-600 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 shadow-md hover:shadow-lg inline-flex items-center justify-center">
                                     ${createIcon('message', 'mr-2 h-5 w-5')}
                                     WhatsApp Us
                                 </a>
