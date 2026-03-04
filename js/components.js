@@ -201,10 +201,9 @@ function createAbout() {
                     
                     <div class="relative">
                         <img
-                            src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            src="Assets/surgical-equipment-unsplash.jpg"
                             alt="Medical professionals and surgical equipment in Nepal"
-                            class="rounded-2xl shadow-xl w-full"
-                            loading="lazy"
+                            class="rounded-2xl shadow-xl w-full h-96 object-cover"
                         />
                         <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
                     </div>
