@@ -3,7 +3,7 @@ const COMPANY_DATA = {
     name: "Mediverse Tradelink",
     shortName: "MVTL",
     tagline: "Pvt Ltd",
-    logo: "./mv.png",
+    logo: "./Assets/mv_logo.png",
     contact: {
         phone: "+977-9851163848",
         email: "mvtl@mediversetradelink.com",
