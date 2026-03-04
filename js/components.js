@@ -11,7 +11,7 @@ function createHeader() {
                             alt="Mediverse Tradelink Logo" 
                             class="h-10 w-auto"
                         />
-                        <div class="hidden sm:block">
+                        <div>
                             <div class="text-xl font-semibold text-gray-900">
                                 Mediverse <span class="text-emerald-600">Tradelink</span>
                             </div>
