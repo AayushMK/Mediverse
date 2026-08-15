@@ -4,6 +4,10 @@ const COMPANY_DATA = {
     shortName: "MVTL",
     tagline: "Pvt Ltd",
     logo: "./Assets/mv_logo.png",
+    // Internal sales-force app (PharmaSFO). Swap to app.mediversetradelink.com
+    // once the subdomain is pointed at it; label/URL kept here for one-line edits.
+    appUrl: "https://pharmasfo-76aea7d3d8fa.herokuapp.com/",
+    appLinkLabel: "Staff Login",
     contact: {
         phone: "+977-9851163848",
         email: "mvtl@mediversetradelink.com",

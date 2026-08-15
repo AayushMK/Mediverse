@@ -29,9 +29,17 @@ function createHeader() {
                                 ${item.name}
                             </button>
                         `).join('')}
+                        <span class="mx-2 h-6 w-px bg-gray-200" aria-hidden="true"></span>
+                        <a
+                            href="${COMPANY_DATA.appUrl}"
+                            class="inline-flex items-center gap-1.5 px-3 py-2 text-sm font-medium text-gray-500 hover:text-emerald-600 hover:bg-emerald-50 rounded-lg transition-all duration-200"
+                        >
+                            <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
+                            ${COMPANY_DATA.appLinkLabel}
+                        </a>
                         <button
                             onclick="scrollToSection('#contact')"
-                            class="ml-4 bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-2 rounded-lg shadow-sm transition-colors"
+                            class="ml-2 bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-2 rounded-lg shadow-sm transition-colors"
                         >
                             Get in Touch
                         </button>
@@ -60,10 +68,17 @@ function createHeader() {
                                 ${item.name}
                             </button>
                         `).join('')}
-                        <div class="pt-2">
+                        <div class="pt-4 mt-2 border-t border-gray-100 space-y-3">
+                            <a
+                                href="${COMPANY_DATA.appUrl}"
+                                class="w-full inline-flex items-center justify-center gap-2 border border-emerald-600 text-emerald-700 hover:bg-emerald-50 px-4 py-3 rounded-lg font-medium transition-colors"
+                            >
+                                <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
+                                ${COMPANY_DATA.appLinkLabel}
+                            </a>
                             <button
                                 onclick="scrollToSection('#contact'); closeMobileMenu()"
-                                class="w-full bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-3 rounded-lg text-center"
+                                class="w-full bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-3 rounded-lg text-center font-medium transition-colors"
                             >
                                 Get in Touch
                             </button>
